@@ -5,6 +5,7 @@
  */
 
 //http://tutorials.jenkov.com/java-multithreaded-servers/multithreaded-server.html
+//http://codigoprogramacion.com/cursos/java/103-sockets-en-java-con-cliente-y-servidor.html#.U1RLU0hn-2w
 
 package tp1;
 
@@ -22,9 +23,10 @@ public class TP1 {
         
         MultiThreadedServer server = new MultiThreadedServer(9000);
         new Thread(server).start();
+        System.out.println("Start Thread");
 
         try {
-            Thread.sleep(20 * 1000);
+            Thread.sleep(200 * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
